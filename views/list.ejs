@@ -1,0 +1,26 @@
+<%- include("header") -%>
+    <div class="box" id="heading">
+        <!-- EJS Script -->
+        <h1><%= listTitle %></h1>
+    </div>
+
+    <div class="box">
+        <!-- Create List of item script -->
+        <% for (var i = 0; i < newListItems.length; i++) { %>
+        <div class="item">
+            <form action="/deleteItem" method="POST">
+                <input type="checkbox"> 
+                <p class="listItem" type="text" name="newItem"><%= newListItems[i] %></p>
+                <button class="btnRight" type="submit" name="list" value="<%= listTitle %>">-</button>
+            </form>
+        </div>
+
+        <% } %>
+        
+        <!-- Form submission from user input -->
+        <form class="item" id="userInput" action="/" method="POST">
+            <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+            <button class="btnRight" type="submit" name="list" value="<%= listTitle %>">+</button>
+        </form>
+    </div>
+<%- include("footer") -%>

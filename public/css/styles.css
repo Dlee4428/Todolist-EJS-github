@@ -1,0 +1,104 @@
+html {
+  background-color: #E4E9FD;
+  /* Create gradient images feature */
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  min-height: 1000px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #A683E3;
+  text-align: center;
+}
+
+.item {
+  min-height: 70px;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+ 
+/* Target all the items inside div and apply specific style into it */
+.item:last-child {
+  border-bottom: 0;
+}
+
+/* Look for input that is in checked state and change specific styles */
+ input:checked+p { /* Selects all <p> elements that are placed immediately after <div> elements */
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+}
+
+/* Apply only specific type input */
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+  display: inline-block;
+}
+
+#userInput {
+  text-align: center;
+}
+
+.btnRight {
+  float: right;
+  margin: 10px;
+}
+
+button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #A683E3;
+  color: #fff;
+  font-size: 30px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+/* sudo selector target only placeholder and make it grey and opaque */
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
